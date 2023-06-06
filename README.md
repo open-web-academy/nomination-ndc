@@ -1,1 +1,1 @@
-# kudos-monorepo
+# Kudos Widget
