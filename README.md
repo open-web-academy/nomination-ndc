@@ -1,1 +1,13 @@
 # Nominations 
+
+## NDC.Nomination.Header - **Status** ***(Work in progress)***
+### [Component code](https://near.org/near/widget/ComponentDetailsPage?src=syi216.near/widget/NDC.Nomination.Header)
+
+---
+## NDC.Nomination.Page - **Status** ***(Work in progress)***
+### [Component code](https://near.org/near/widget/ComponentDetailsPage?src=syi216.near/widget/NDC.Nomination.Page)
+
+---
+
+## NDC.Nomination.Card - **Status** ***(Work in progress)***
+### [Component code](https://near.org/near/widget/ComponentDetailsPage?src=syi216.near/widget/NCD.Nomination.Card)
