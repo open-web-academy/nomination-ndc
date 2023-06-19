@@ -10,4 +10,4 @@
 ---
 
 ## NDC.Nomination.Card - **Status** ***(Work in progress)***
-### [Component code](https://near.org/near/widget/ComponentDetailsPage?src=syi216.near/widget/NCD.Nomination.Card)
+### [Component code](https://near.org/syi216.near/widget/NDC.nomination.card)
