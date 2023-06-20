@@ -11,3 +11,8 @@
 
 ## NDC.Nomination.Card - **Status** ***(Work in progress)***
 ### [Component code](https://near.org/syi216.near/widget/NDC.nomination.card)
+
+---
+
+## NDC.Nomination.Compose - **Status** ***(Work in progress)***
+### [Component code](https://near.org/dokxo.near/widget/NDC.Nomination.Compose)
