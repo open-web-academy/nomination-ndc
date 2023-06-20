@@ -1,0 +1,449 @@
+.CardStyled {
+width: 358px;
+height: 100%;
+left: 16px;
+top: 469px;
+background: #F8F8F9;
+border-radius: 10px;
+margin-left:auto;
+margin-right:auto;   
+}
+.CardForm {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 18px;
+width: 326px;
+height: auto;
+margin-left:16px;
+margin-right:auto;
+margin-top:18px; 
+}
+
+ 
+.Formsection{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+width: 326px;
+height: 60px;
+flex: none;
+order: 0;
+flex-grow: 0;   
+}
+
+.FormsectionPlatform {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+width: 326px;
+height: 96px;
+flex: none;
+order: 3;
+flex-grow: 0;    
+}
+.FormsectionPlatformtitle{
+width: 326px;
+height: 28px;
+font-family: 'Avenir';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 120%;
+display: flex;
+align-items: center;
+color: #000000;    
+}
+.FormsectionPlatformtextarea{
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 9px 10px;
+gap: 10px;
+width: 326px;
+height: 60px;
+background: #FFFFFF;
+border: 1px solid #D0D6D9;
+border-radius: 8px;
+flex: none;
+order: 1;
+flex-grow: 0;
+font-size: 12px;    
+}
+.FormsectionHouse{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+width: 326px;
+height: 54px;
+flex: none;
+order: 6;
+flex-grow: 0;    
+}
+.FormsectionHouseDropdown {
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 8px 10px;
+gap: 10px;
+width: 326px;
+height: 32px;
+background: #FFFFFF;
+border: 1px solid #D0D6D9;
+border-radius: 8px;
+flex: none;
+order: 1;
+flex-grow: 0;
+font-size:12px;
+font-family: 'Avenir';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 120%;
+display: flex;
+align-items: center;
+color: #828688;    
+}
+.FormsectionDecaration {
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+width: 264px;
+height: 20px;
+flex: none;
+order: 1;
+flex-grow: 0;    
+}
+
+.FormsectionAffiliation{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+width: 326px;
+height: auto;
+flex: none;
+order: 7;
+flex-grow: 0;    
+}
+ 
+.AffiliationHead {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 6px;
+width: 326px;
+height: 26px;
+flex: none;
+order: 0;
+flex-grow: 0;    
+}
+.AffiliationTitle {
+display: flex;
+flex-direction: row;
+justify-content:  space-between ;
+align-items: center;
+padding: 0px;
+gap: 8px;
+width: 326px;
+height: 20px;
+flex: none;
+order: 0;
+flex-grow: 0;    
+}
+
+.AffiliationBody{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+width: 326px;
+height: auto;
+flex: none;
+order: 1;
+flex-grow: 0;    
+}
+.Companycont{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+width: 326px;
+height: 50px;
+flex: none;
+order: 0;
+flex-grow: 0;    
+}
+.DateCont {
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 4px;
+width: 326px;
+height: 50px;
+flex: none;
+order: 1;
+flex-grow: 0;   
+}
+.DateContItem {  
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+width: 161px;
+height: 50px;
+flex: none;
+order: 0;
+flex-grow: 1;}
+.CompanyTitle{
+width: 100%;
+height: 12px;
+font-family: 'Avenir';
+font-style: normal;
+font-weight: 500;
+font-size: 10px;
+line-height: 120%;
+display: flex;
+align-items: center;
+color: #000000;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+justify-content:  space-between ;    
+}
+.CompanyInput {
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 9px 10px;
+gap: 10px;
+width: 326px;
+height: 30px;
+background: #FFFFFF;
+border: 1px solid #D0D6D9;
+border-radius: 8px;
+flex: none;
+order: 1;
+flex-grow: 0;
+font-family: 'Avenir';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 120%;
+display: flex;
+align-items: center;
+color: #828688;    
+}
+
+.H1styled {
+margin-left:16px;
+margin-top:16px;
+margin-right:auto; 
+width: 104px;
+height: 19px;
+font-family: 'Avenir';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 120%;
+color: #000000;    
+}
+.H2styled {
+width: 77px;
+height: 14px;
+font-family: 'Avenir';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 120%;
+display: flex;
+align-items: center;
+color: #000000;
+flex: none;
+order: 0;
+flex-grow: 0;    
+}
+.InputStyled {
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 9px 10px;
+gap: 10px;
+width: 326px;
+height: 32px;
+font-size: 12px;
+background: #FFFFFF;
+border: 1px solid #D0D6D9;
+border-radius: 8px;
+flex: none;
+order: 1;
+flex-grow: 0;    
+}
+
+.InputcheckboxStyled {
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px 0px;
+gap: 10px;
+width: 20px;
+height: 20px;
+background: #FFFFFF;
+border: 1px solid #D0D6D9;
+border-radius: 4px;
+flex: none;
+order: 0;
+flex-grow: 0;    
+}
+
+.Submitcontainer{
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+align-items: center;
+padding: 0px;
+gap: 8px;
+margin-left:200px;
+margin-top:10px;
+margin-bottom:25px;
+width: 205px;
+height: 28px;    
+}
+
+.SubmitBtn{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 2px 12px;
+gap: 10px; 
+font-family: 'Avenir';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 16px;
+color:#000000;
+margin-right:50px;
+width: 100px;
+height: 28px;
+background: #FFD50D;
+border-color:#FFD50D;
+border-radius: 8px;
+border-radius: 8px;
+flex: none;
+order: 1;
+flex-grow: 0;    
+}
+
+.CancelBtn{
+   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 12px;
+  width: 97px;
+  height: 28px;
+  font-size:12px;
+  color:#9333EA;
+  border-radius:15px;
+  border-style: solid;
+  border-color: #9333EA;
+  background: #00000000 ;
+  box-sizing: border-box;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 12px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;   
+}
+
+.H2Declarationstyled{
+ width: 152px;
+height: 14px;
+font-family: 'Avenir';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 120%;
+display: flex;
+align-items: center;
+color: #000000;
+flex: none;
+order: 0;
+flex-grow: 0;   
+}
+
+.PStyled {
+width: 236px;
+height: 14px;
+font-family: 'Avenir';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 120%;
+display: flex;
+align-items: center;
+color: #000000;
+flex: none;
+order: 1;
+flex-grow: 0;
+margin-top: 0; 
+margin-bottom:0;    
+}
+.AStyled{
+ margin-left:4px;
+height: 14px;
+font-family: 'Avenir';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 120%;
+display: flex;
+align-items: center;
+color: #000000;
+flex: none;
+order: 1;
+flex-grow: 0;
+text-decoration-line: underline;   
+}
+
+.LabelFile{
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 9px 10px;
+gap: 10px;
+width: 326px;
+height: 38px;
+background: #FFFFFF;
+border: 1px dashed #D0D6D9;
+border-radius: 8px;
+flex: none;
+order: 1;
+flex-grow: 0;    
+}
