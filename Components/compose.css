@@ -450,7 +450,7 @@ flex-grow: 0;
 }
 
 .WidgetPreview{
-  display: none;
+  display: none !important;
   }
 /* On screens that are 600px wide or less, the background color is olive */
 
@@ -897,5 +897,8 @@ flex-grow: 0;
     order: 1;
     flex-grow: 0;    
     }
+    .WidgetPreview{
+      display: block;
+      }
   
 }

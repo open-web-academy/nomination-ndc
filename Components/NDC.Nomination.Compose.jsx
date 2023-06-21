@@ -194,7 +194,9 @@ return (
           "margin-bottom": "15px",
         }}
       >
-        <Widget
+        <div class="WidgetPreview">
+          <Widget
+          class="WidgetPreview"
           src={`syi216.near/widget/NDC.nomination.card`}
           props={{
             name: state.name,
@@ -207,6 +209,8 @@ return (
             tags: state.tags.split(";"),
           }}
         />
+        </div>
+        
       </div>
       <div  name="compose" class="CardStyled">
         <div className="d-flex flex-column ">
