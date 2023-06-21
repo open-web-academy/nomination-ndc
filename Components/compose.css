@@ -830,7 +830,6 @@ flex-grow: 0;
       order: 0;
       flex-grow: 0;   
     }
-    
     .H2Declarationstyled{
      width: 152px;
     height: 14px;
@@ -897,6 +896,12 @@ flex-grow: 0;
     order: 1;
     flex-grow: 0;    
     }
+    .Widget{
+      display: none;
+      @media (max-width: 768px) {
+              display: block;
+      }  
+      }
     .WidgetPreview{
       display: block;
       }
