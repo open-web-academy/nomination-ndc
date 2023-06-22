@@ -1,5 +1,5 @@
 .CardStyled {
-width: 358px;
+width: 70%;
 height: 100%;
 left: 16px;
 top: 469px;
@@ -896,14 +896,6 @@ flex-grow: 0;
     order: 1;
     flex-grow: 0;    
     }
-    .Widget{
-      display: none;
-      @media (max-width: 768px) {
-              display: block;
-      }  
-      }
-    .WidgetPreview{
-      display: block;
-      }
+    
   
 }
