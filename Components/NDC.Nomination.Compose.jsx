@@ -1,11 +1,18 @@
 // ccs on pinata      "https://emerald-related-swordtail-341.mypinata.cloud/ipfs/Qmf7S21gTQSmcKLPrVckP3f7QUSm4SZLZVWYAGk4tCNAFH?_gl=1*1h86bh5*rs_ga*YTcxZDg1OTgtZTYyOC00M2U2LWE4MTctNzUzMDRkMjA3ZWVl*rs_ga_5RMPXG14TE*MTY4NzMwMDc0OC4xNS4xLjE2ODczMDA4NTAuMTkuMC4w"
  
 const css = fetch(
-  "https://emerald-related-swordtail-341.mypinata.cloud/ipfs/Qmf7S21gTQSmcKLPrVckP3f7QUSm4SZLZVWYAGk4tCNAFH?_gl=1*1h86bh5*rs_ga*YTcxZDg1OTgtZTYyOC00M2U2LWE4MTctNzUzMDRkMjA3ZWVl*rs_ga_5RMPXG14TE*MTY4NzMwMDc0OC4xNS4xLjE2ODczMDA4NTAuMTkuMC4w"
+  "https://raw.githubusercontent.com/open-web-academy/nomination-ndc/Composelt/Components/compose.css"
   ).body;
   if (!css) return "";
  
 
+  const HiddeableWidget = styled.div`
+        
+        display: none;
+        @media (max-width: 768px) {
+                display: block;
+        }
+        `;
 // State
 State.init({
   theme,
@@ -194,9 +201,9 @@ return (
           "margin-bottom": "15px",
         }}
       >
-        <div class="WidgetPreview">
+        <HiddeableWidget >
           <Widget
-          class="WidgetPreview"
+         
           src={`syi216.near/widget/NDC.nomination.card`}
           props={{
             name: state.name,
@@ -209,7 +216,7 @@ return (
             tags: state.tags.split(";"),
           }}
         />
-        </div>
+        </HiddeableWidget>
         
       </div>
       <div  name="compose" class="CardStyled">

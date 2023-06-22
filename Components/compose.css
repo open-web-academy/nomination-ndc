@@ -4,7 +4,7 @@ height: 100%;
 left: 16px;
 top: 469px;
 
-background:  linear-gradient(#00000028, #00000028);
+background:   #00000015;
 border-radius: 10px;
 margin-left:auto;
 margin-right:auto;   
@@ -449,9 +449,7 @@ order: 1;
 flex-grow: 0;    
 }
 
-.WidgetPreview{
-  display: none !important;
-  }
+ 
 /* On screens that are 600px wide or less, the background color is olive */
 
 @media screen and (max-width: 600px) {
