@@ -1,6 +1,6 @@
 const CardStyled = styled.div`
  
-width: 358px;
+width: 80%;
 height: 100%;
 left: 16px;
 top: 469px;
@@ -9,6 +9,9 @@ background: #F8F8F9;
 border-radius: 10px;
 margin-left:auto;
 margin-right:auto;
+@media only screen and (max-width: 600px) {
+  width: 100%;
+}
 
   `;
 const CardForm = styled.div`
@@ -17,24 +20,48 @@ flex-direction: column;
 align-items: flex-start;
 padding: 0px;
 gap: 18px;
-width: 326px;
+width: 100%;
 height: 1030px;
 margin-left:16px;
 margin-right:auto;
 margin-top:18px;
+@media only screen and (max-width: 600px) {
+  
+  width: 326px;
+}
   `;
 
+const FormProfilesection = styled.div`
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+ 
+width: 100%;
+height: 60px;
+flex: none;
+order: 0;
+flex-grow: 0;
+@media only screen and (max-width: 600px) {
+  
+  width: 326px;
+}
+  `;
 const Formsection = styled.div`
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: 0px;
-gap: 8px;
-width: 326px;
+ 
+width: 30%;
 height: 60px;
 flex: none;
 order: 0;
 flex-grow: 0;
+@media only screen and (max-width: 600px) {
+  
+  width: 326px;
+}
   `;
 const FormsectionPlatform = styled.div`
 display: flex;
@@ -42,15 +69,18 @@ flex-direction: column;
 align-items: flex-start;
 padding: 0px;
 gap: 8px;
-width: 326px;
+width: 20%x;
 height: 96px;
 flex: none;
 order: 3;
 flex-grow: 0;
- 
+@media only screen and (max-width: 600px) {
+  
+  width: 326px;
+}
   `;
 const FormsectionPlatformtitle = styled.h2`
-width: 326px;
+width: 30%;
 height: 28px;
 font-family: 'Avenir';
 font-style: normal;
@@ -60,6 +90,10 @@ line-height: 120%;
 display: flex;
 align-items: center;
 color: #000000;
+@media only screen and (max-width: 600px) {
+  
+  width: 326px;
+}
   `;
 const FormsectionPlatformtextarea = styled.textarea`
 box-sizing: border-box;
@@ -68,7 +102,7 @@ flex-direction: row;
 align-items: flex-start;
 padding: 9px 10px;
 gap: 10px;
-width: 326px;
+width: 30%;
 height: 60px;
 background: #FFFFFF;
 border: 1px solid #D0D6D9;
@@ -77,18 +111,28 @@ flex: none;
 order: 1;
 flex-grow: 0;
 font-size: 12px;
+@media only screen and (max-width: 600px) {
+  
+  width: 326px;
+}
   `;
 const FormsectionHouse = styled.div`
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: 0px;
-gap: 8px;
-width: 326px;
+
+width: 33%;
 height: 54px;
 flex: none;
+display: flex;
 order: 6;
 flex-grow: 0;
+@media only screen and (max-width: 600px) {
+  
+  width: 326px;
+  display: none;
+}
 
   `;
 const FormsectionHouseDropdown = styled.select`
@@ -98,7 +142,7 @@ flex-direction: row;
 align-items: flex-start;
 padding: 8px 10px;
 gap: 10px;
-width: 326px;
+width: 90%;
 height: 32px;
 background: #FFFFFF;
 border: 1px solid #D0D6D9;
@@ -112,13 +156,15 @@ font-style: normal;
 font-weight: 400;
 font-size: 12px;
 line-height: 120%;
-/* or 14px */
-
+ 
 display: flex;
 align-items: center;
 
 color: #828688;
-
+@media only screen and (max-width: 600px) {
+  
+  width: 326px;
+}
   `;
 const FormsectionDecaration = styled.div`
 display: flex;
@@ -296,7 +342,7 @@ line-height: 120%;
 color: #000000;
 `;
 const H2styled = styled.h1`
-width: 77px;
+ 
 height: 14px;
 font-family: 'Avenir';
 font-style: normal;
@@ -335,7 +381,7 @@ flex-direction: row;
 align-items: flex-start;
 padding: 9px 10px;
 gap: 10px;
-width: 326px;
+width: 90%;
 height: 32px;
 font-size: 12px;
 background: #FFFFFF;
@@ -344,6 +390,10 @@ border-radius: 8px;
 flex: none;
 order: 1;
 flex-grow: 0;
+@media only screen and (max-width: 600px) {
+  
+  width: 326px;
+}
 `;
 const SelectStyled = styled.select`
 padding-left:15px;
@@ -354,7 +404,7 @@ margin-left:auto;
 margin-right:auto;
 box-sizing: border-box;
 
-width: 338px;
+width: 100%;
 height: 31px;
 left: 25px;
 top: 964px;
@@ -362,6 +412,10 @@ top: 964px;
 background: #FFFFFF;
 border: 1px solid #000000;
 border-radius: 8px;
+@media only screen and (max-width: 600px) {
+  
+  width: 326px;
+}
 `;
 const InputImg = styled.input`
 box-sizing: border-box;
@@ -534,17 +588,14 @@ text-decoration-line: underline;
 `;
 
 const LabelFile = styled.label`
-   box-sizing: border-box;
-
-/* Auto layout */
-
+box-sizing: border-box;
 display: flex;
 flex-direction: row;
 align-items: center;
 padding: 9px 10px;
 gap: 10px;
 
-width: 326px;
+width: 100%;
 height: 38px;
 
 background: #FFFFFF;
@@ -556,15 +607,24 @@ border-radius: 8px;
 flex: none;
 order: 1;
 flex-grow: 0;
+@media only screen and (max-width: 600px) {
+  width: 326px;
+}
 
 `;
 const InputFile = styled.input`
     display: none;
 `;
-
+const HiddeableWidget = styled.div`
+  display: none;
+  @media (max-width: 428px) {
+    display: block;
+  }
+`;
 // State
 State.init({
-  profilepath: "",
+  theme,
+  img: { uploading: false, cid: null, name: "" },
   name: "",
   profileAccount: "",
   issued1: "",
@@ -582,7 +642,13 @@ State.init({
   tags: "",
   error_msg: "",
 });
-
+if (!state.theme) {
+  State.update({
+    theme: styled.div`
+      ${css}
+    `,
+  });
+}
 const handleInputs = (_type, _param) => {
   switch (_type) {
     case "name":
@@ -616,16 +682,7 @@ const handleInputs = (_type, _param) => {
     default:
   }
 };
-const handleProfilepic = (event) => {
-  if (event.target.files && event.target.files[0]) {
-    let img = event.target.files[0];
-    State.update({ profilepath: URL.createObjectURL(img) });
-  }
-};
-const handleFileChange = (event) => {
-  console.log(event);
-  State.update({ profilepath: URL.createObjectURL(event.target.value) });
-};
+
 const addFields = () => {
   var temp = state.afiliation;
   let object = {
@@ -641,10 +698,10 @@ const addFields = () => {
     State.update({ afiliation: temp });
   }
 };
-let AffiliationBodyheight = "125px";
+
 const handleFieldsChange = (event, index, _input) => {
   let data = state.afiliation;
-  AffiliationBodyheight = "340px";
+
   switch (_input) {
     case "company":
       console.log("updating the company");
@@ -676,7 +733,6 @@ const removeField = (index) => {
 const submitButton = () => {};
 const validatedInputs = () => {
   const {
-    profilepath,
     name,
     profileAccount,
     issued1,
@@ -712,13 +768,32 @@ const validatedInputs = () => {
   }
 };
 
+const uploadFileUpdateState = (body) => {
+  asyncFetch("https://ipfs.near.social/add", {
+    method: "POST",
+    headers: { Accept: "application/json" },
+    body,
+  }).then(async (res) => {
+    console.log("body", res.body);
+    const _cid = res.body.cid;
+    const _name = body.name;
+    State.update({ img: { uploading: true, cid: _cid, name: _name } });
+    console.log("final ", state.img);
+  });
+
+  console.log("final ", state.img);
+};
+
+const filesOnChange = (files) => {
+  if (files) {
+    uploadFileUpdateState(files[0]);
+  }
+};
+
 return (
-  <>
+  < >
     <div
-      style={{
-        background: "#FFFFFF",
-        position: "relative",
-        width: "390px",
+       style={{
         height: "full",
       }}
     >
@@ -730,56 +805,86 @@ return (
           "margin-bottom": "15px",
         }}
       >
-        <Widget
-          src={`syi216.near/widget/NDC.nomination.card`}
-          props={{
-            profilepath: state.profilepath,
-            name: state.name,
-            profileAccount: state.profileAccount,
-            issued1: state.issued1,
-            issued2: state.issued2,
-            issued3: state.issued3,
-            house_intended: state.house_intended,
-            afiliation: state.afiliation,
-            tags: state.tags.split(";"),
-          }}
-        />
+          <HiddeableWidget>
+          <Widget
+            src={`syi216.near/widget/NDC.nomination.card`}
+            props={{
+              name: state.name,
+              profileAccount: state.profileAccount,
+              issued1: state.issued1,
+              issued2: state.issued2,
+              issued3: state.issued3,
+              house_intended: state.house_intended,
+              afiliation: state.afiliation,
+              tags: state.tags.split(";"),
+            }}
+          />
+        </HiddeableWidget>
       </div>
-      <CardStyled name="compose">
+      <CardStyled name="compose" class="Cardstyled">
         <div className="d-flex flex-column ">
           <div className="d-flex flex-column">
             <H1styled>Self Nominate</H1styled>
           </div>
           <CardForm>
-            <Formsection style={{ order: "0" }}>
-              <H2styled>Profile picture {state.profilepath} </H2styled>
+            
+            <FormProfilesection  class=" row  " style={{ order: "0" }}>
+            <div class=" row col-sm-12   ">
+               <H2styled class="w-100"> Profile picture {state.profilepath} </H2styled>
 
-              <LabelFile class="custom-file-upload">
-                <InputFile type="file" />
-                <img
-                  src={`https://emerald-related-swordtail-341.mypinata.cloud/ipfs/QmWyPdBc3nqDe2mAp26a4BAvDYiuk1JEfJiyGejff3ZrjL?_gl=1*mwwy4f*rs_ga*YTcxZDg1OTgtZTYyOC00M2U2LWE4MTctNzUzMDRkMjA3ZWVl*rs_ga_5RMPXG14TE*MTY4Njk2NDYyNi4xNC4xLjE2ODY5NjQ2NDQuNDIuMC4w`}
-                />
-                <p
-                  style={{
-                    width: "173px",
-                    height: "14px",
-                    "font-family": "Avenir",
-                    "font-style": "normal",
-                    "font-weight": "400",
-                    "font-size": "12px",
-                    "line-height": "120%",
-                    display: "flex",
-                    "align-items": "center",
-                    color: "#828688",
-                    flex: "none",
-                    order: "1",
-                    "flex-grow": "0",
-                  }}
-                >
-                  {"Click here to upload your image "}
-                </p>
-              </LabelFile>
-            </Formsection>
+              <div class=" w-100">
+                  <LabelFile
+                    class="LabelFile custom-file-upload   "
+                     
+                  >
+                    <Files
+                      multiple={false}
+                      accepts={["image/*"]}
+                      minFileSize={1}
+                      clickable
+                      onChange={filesOnChange}
+                      style={{
+                        display: "flex",
+                        "justify-content": "center",
+                        "padding-top": "16px",
+                        "margin-bottom": "15px",
+                      }}
+                    >
+                      <img
+                        src={`https://emerald-related-swordtail-341.mypinata.cloud/ipfs/QmWyPdBc3nqDe2mAp26a4BAvDYiuk1JEfJiyGejff3ZrjL?_gl=1*mwwy4f*rs_ga*YTcxZDg1OTgtZTYyOC00M2U2LWE4MTctNzUzMDRkMjA3ZWVl*rs_ga_5RMPXG14TE*MTY4Njk2NDYyNi4xNC4xLjE2ODY5NjQ2NDQuNDIuMC4w`}
+                      />
+                      <p
+                        style={{
+                          height: "14px",
+                          "font-family": "Avenir",
+                          "font-style": "normal",
+                          "font-weight": "400",
+                          "font-size": "12px",
+                          "line-height": "120%",
+                          display: "flex",
+                          "align-items": "center",
+                          color: "#828688",
+                          flex: "none",
+                          order: "1",
+                          "flex-grow": "0",
+                          "margin-top": "2px",
+                          "margin-bottom": "0rem",
+                          "margin-left": ".5rem",
+                        }}
+                      >
+                        {state.img.name === ""
+                          ? "Click here to upload your image"
+                          : state.img.name}
+                      </p>
+                    </Files>
+                  </LabelFile>
+                </div>
+            </div>
+             
+               
+            </FormProfilesection>
+
+            <div class="row w-100 gap-2" style={{marginLeft:"1px"}}>
             <Formsection style={{ order: "1" }}>
               <H2styled>Name </H2styled>
               <InputStyled
@@ -800,7 +905,26 @@ return (
                 onChange={(e) => handleInputs("profileAccount", e)}
               />
             </Formsection>
-            <FormsectionPlatform style={{ order: "3" }}>
+            <FormsectionHouse style={{ order: "4" }}>
+              <H2styled>{"House"} </H2styled>
+              <FormsectionHouseDropdown
+                name="house-intended"
+                id="house-intended"
+                onChange={(e) => handleInputs("house_intended", e)}
+              >
+                <option default value="0">
+                  Select house
+                </option>
+                <option value="Council of Advisors">Council of Advisors</option>
+                <option value="House Of Merit">House Of Merit</option>
+                <option value="Transparency Commission">
+                  Transparency Commission
+                </option>
+              </FormsectionHouseDropdown>
+            </FormsectionHouse>
+            </div>
+            <div class="row w-100 gap-2" style={{marginLeft:"1px"}}>
+                <FormsectionPlatform  name="FormsectionPlatform" >
               <FormsectionPlatformtitle>
                 {"Platform - Key Issue 1: What’s your view and pledge on XYZ?"}{" "}
               </FormsectionPlatformtitle>
@@ -809,10 +933,10 @@ return (
                 id="Profile"
                 type="text"
                 placeholder="Write your platform "
-                onChange={(e) => handleInputs("issued1", e)}
+                onChange={(e) => handleInputs("issued2", e)}
               />
-            </FormsectionPlatform>
-            <FormsectionPlatform>
+               </FormsectionPlatform>
+            <FormsectionPlatform  >
               <FormsectionPlatformtitle>
                 {"Platform - Key Issue 2: What’s your view and pledge on XYZ?"}{" "}
               </FormsectionPlatformtitle>
@@ -835,7 +959,12 @@ return (
                 placeholder="Write your platform "
                 onChange={(e) => handleInputs("issued3", e)}
               />
-            </FormsectionPlatform>
+            </FormsectionPlatform> 
+               
+            </div>
+
+           
+            
             <FormsectionHouse style={{ order: "4" }}>
               <H2styled>{"House"} </H2styled>
               <FormsectionHouseDropdown
