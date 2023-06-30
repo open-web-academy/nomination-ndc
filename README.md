@@ -21,3 +21,8 @@
 
 ## NDC.Nomination.Compose - **Status** ***(Work in progress)***
 ### [Component code](https://near.org/dokxo.near/widget/NDC.Nomination.Compose)
+
+---
+
+## NDC.Nomination.CommentReplay - **Status** ***(Work in progress)***
+### [Component code](https://near.org/dokxo.near/widget/CommentCard)
