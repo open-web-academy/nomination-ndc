@@ -1,6 +1,18 @@
+const ModalCard = styled.div`
+width: 100%;
+height: 100%;
+z-index: 1;
+background: rgba(0, 0, 0, 0.70);
+padding-top: 25%;
+padding-bottom: 25%;
+ 
+@media only screen and (max-width: 480px) {
+ 
+}
+`;
 const CardStyled = styled.div`
  
-width: 358px;
+width: 80%;
 height: 100%;
 left: 16px;
 top: 469px;
@@ -9,6 +21,9 @@ background: #F8F8F9;
 border-radius: 10px;
 margin-left:auto;
 margin-right:auto;
+@media only screen and (max-width: 480px) {
+  width: 100%;
+}
 
   `;
 const CardForm = styled.div`
@@ -17,78 +32,34 @@ flex-direction: column;
 align-items: flex-start;
 padding: 0px;
 gap: 18px;
-width: 326px;
-height: 1030px;
-margin-left:16px;
-margin-right:auto;
+width: 100%;
+height: auto;
+ 
 margin-top:18px;
+@media only screen and (max-width: 480px) {
+  
+   
+   
+}
   `;
 
-const Formsection = styled.div`
+const FormsectionHouse_ = styled.div`
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: 0px;
-gap: 8px;
-width: 326px;
-height: 60px;
-flex: none;
-order: 0;
-flex-grow: 0;
-  `;
-const FormsectionPlatform = styled.div`
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 8px;
-width: 326px;
-height: 96px;
-flex: none;
-order: 3;
-flex-grow: 0;
  
-  `;
-const FormsectionPlatformtitle = styled.h2`
-width: 326px;
-height: 28px;
-font-family: 'Avenir';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 120%;
-display: flex;
-align-items: center;
-color: #000000;
-  `;
-const FormsectionPlatformtextarea = styled.textarea`
-box-sizing: border-box;
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 9px 10px;
-gap: 10px;
-width: 326px;
-height: 60px;
-background: #FFFFFF;
-border: 1px solid #D0D6D9;
-border-radius: 8px;
-flex: none;
-order: 1;
-flex-grow: 0;
-font-size: 12px;
-  `;
-const FormsectionHouse = styled.div`
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 8px;
-width: 326px;
+width: 33%;
 height: 54px;
 flex: none;
+display: none;
 order: 6;
 flex-grow: 0;
+@media only screen and (max-width: 480px) {
+  
+  
+  display: flex;
+}
 
   `;
 const FormsectionHouseDropdown = styled.select`
@@ -98,189 +69,30 @@ flex-direction: row;
 align-items: flex-start;
 padding: 8px 10px;
 gap: 10px;
-width: 326px;
+width: 100%;
 height: 32px;
 background: #FFFFFF;
 border: 1px solid #D0D6D9;
 border-radius: 8px;
 flex: none;
 order: 1;
-flex-grow: 0;
+
 font-size:12px;
 font-family: 'Avenir';
 font-style: normal;
 font-weight: 400;
 font-size: 12px;
 line-height: 120%;
-/* or 14px */
-
-display: flex;
-align-items: center;
-
-color: #828688;
-
-  `;
-const FormsectionDecaration = styled.div`
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 8px;
-width: 264px;
-height: 20px;
-flex: none;
-order: 1;
-flex-grow: 0;
-  `;
-const FormsectionAffiliation = styled.div`
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-width: 326px;
-height: 146px;
-flex: none;
-order: 7;
-flex-grow: 0;
-  `;
-const AffiliationHead = styled.div`
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 6px;
-width: 326px;
-height: 26px;
-flex: none;
-order: 0;
-flex-grow: 0;
-  `;
-const AffiliationTitle = styled.div`
-display: flex;
-flex-direction: row;
-justify-content:  space-between ;
-align-items: center;
-padding: 0px;
-gap: 8px;
-width: 326px;
-height: 20px;
-flex: none;
-order: 0;
-flex-grow: 0;
-  `;
-const AffiliationBody = styled.div`
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 8px;
-width: 326px;
-height: auto;
-flex: none;
-order: 1;
-flex-grow: 0;
-  `;
-const Companycont = styled.div`
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 8px;
-width: 326px;
-height: 50px;
-flex: none;
-order: 0;
-flex-grow: 0;
-  `;
-const DateCont = styled.div`
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 4px;
-width: 326px;
-height: 50px;
-flex: none;
-order: 1;
-flex-grow: 0;
-  `;
-const DateContItem = styled.div`
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 8px;
-width: 161px;
-height: 50px;
-flex: none;
-order: 0;
-flex-grow: 1;
-  `;
-const CompanyTitle = styled.div`
-width: 100%;
-height: 12px;
-font-family: 'Avenir';
-font-style: normal;
-font-weight: 500;
-font-size: 10px;
-line-height: 120%;
-display: flex;
-align-items: center;
-color: #000000;
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-justify-content:  space-between ;
-  `;
-const CompanyInput = styled.input`
-box-sizing: border-box;
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 9px 10px;
-gap: 10px;
-width: 326px;
-height: 30px;
-background: #FFFFFF;
-border: 1px solid #D0D6D9;
-border-radius: 8px;
-flex: none;
-order: 1;
-flex-grow: 0;
-font-family: 'Avenir';
-font-style: normal;
-font-weight: 400;
-font-size: 10px;
-line-height: 120%;
-display: flex;
-align-items: center;
-color: #828688;
-  `;
-const ProfilePictureBtn = styled.button`
-box-sizing: border-box;
-width: 338px;
-height: 71px;
-margin-left:auto;
-margin-right:auto;
-left: 23px;
-top: 611px;
-background: #FFFFFF;
-border: 1px solid #000000;
-border-radius: 8px;
-margin-bottom:15px;
-  `;
-const ProfileImgStyled = styled.img`
-width: 20px;
-height: 20px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15px;
-  margin-bottom:9px;
  
+display: flex;
+align-items: center;
+
+color: #828688;
+@media only screen and (max-width: 480px) {
+   
+}
   `;
+
 const H1styled = styled.h1`
  
 margin-left:16px;
@@ -296,7 +108,7 @@ line-height: 120%;
 color: #000000;
 `;
 const H2styled = styled.h1`
-width: 77px;
+ 
 height: 14px;
 font-family: 'Avenir';
 font-style: normal;
@@ -310,272 +122,87 @@ flex: none;
 order: 0;
 flex-grow: 0;
 `;
-const H3text = styled.h3`
- 
-width: 229px;
-height: 19px;
-left: 78px;
-top: calc(50% - 19px/2 + 12px);
 
-font-family: 'Avenir';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 16px;
-display: flex;
-margin-left: auto;
-margin-right: auto;
-margin-bottom:15px;
-color: #838181;
-  `;
-const InputStyled = styled.input`
-box-sizing: border-box;
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 9px 10px;
-gap: 10px;
-width: 326px;
-height: 32px;
-font-size: 12px;
-background: #FFFFFF;
-border: 1px solid #D0D6D9;
-border-radius: 8px;
-flex: none;
-order: 1;
-flex-grow: 0;
-`;
-const SelectStyled = styled.select`
-padding-left:15px;
-padding-right:15px;
-font-size:12px;
-margin-bottom:15px;
-margin-left:auto;
-margin-right:auto;
-box-sizing: border-box;
-
-width: 338px;
-height: 31px;
-left: 25px;
-top: 964px;
-
-background: #FFFFFF;
-border: 1px solid #000000;
-border-radius: 8px;
-`;
-const InputImg = styled.input`
-box-sizing: border-box;
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 9px 10px;
-gap: 10px;
-width: 326px;
-height: 38px;
-background: #FFFFFF;
-border: 1px dashed #D0D6D9;
-border-radius: 8px;
-flex: none;
-order: 1;
-flex-grow: 0;
-`;
-const InputTextAreaStyled = styled.textarea`
-padding-left:15px;
-padding-right:15px;
-font-size:12px;
-padding-bottom:10px;
-margin-bottom:15px;
-margin-left:auto;
-margin-right:auto;
-box-sizing: border-box;
-
- 
-width: 338px;
-height: 98px;
-left: 24px;
-top: 836px;
-
-background: #FFFFFF;
-border: 1px solid #000000;
-border-radius: 8px;
-`;
-const InputcheckboxStyled = styled.input`
-box-sizing: border-box;
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px 0px;
-gap: 10px;
-width: 20px;
-height: 20px;
-background: #FFFFFF;
-border: 1px solid #D0D6D9;
-border-radius: 4px;
-flex: none;
-order: 0;
-flex-grow: 0;
-`;
 const Submitcontainer = styled.div`
 display: flex;
-flex-direction: row;
 justify-content: flex-end;
 align-items: center;
-padding: 0px;
 gap: 8px;
-margin-left:200px;
-margin-top:10px;
-margin-bottom:25px;
-width: 205px;
-height: 28px;
+margin-bottom:16px;
 
 `;
 const SubmitBtn = styled.button`
-display: flex;
-flex-direction: row;
+ display: flex;
+width: 107px;
+padding: 8px 12px;
 justify-content: center;
 align-items: center;
-padding: 2px 12px;
-gap: 10px; 
-font-family: 'Avenir';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 16px;
-color:#000000;
-margin-right:50px;
-width: 100px;
-height: 28px;
-background: #FFD50D;
-border-color:#FFD50D;
-border-radius: 8px;
+gap: 10px;
+color:#000;
+display: flex;
+width: 107px;
+padding: 8px 12px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 10px;
+ border-width: 1px;
+  border: solid 1px transparent;
  
-
-border-radius: 8px;
-flex: none;
-order: 1;
-flex-grow: 0;
-
+ 
+  background-image: linear-gradient(#FFD50D, #FFD50D), radial-gradient(circle at top left,#F0E1CE, #F0E1CE);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+@media only screen and (max-width: 480px) {
+ 
+}
 
 `;
 const CancelBtn = styled.button`
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  padding: 2px 12px;
-  width: 97px;
-  height: 28px;
-  font-size:12px;
-  color:#9333EA;
-  border-radius:15px;
-  border-style: solid;
-  border-color: #9333EA;
-  background: #00000000 ;
-  box-sizing: border-box;
-  gap: 10px;
-  font-weight: 500;
-  font-size: 12px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 8px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-`;
-
-const H2Declarationstyled = styled.h1`
-width: 152px;
-height: 14px;
-font-family: 'Avenir';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 120%;
-display: flex;
+width: 107px;
+padding: 8px 12px;
+justify-content: center;
 align-items: center;
-color: #000000;
-flex: none;
-order: 0;
-flex-grow: 0;
-`;
-const PStyled = styled.p`
-width: 236px;
-height: 14px;
-font-family: 'Avenir';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 120%;
-display: flex;
-align-items: center;
-color: #000000;
-flex: none;
-order: 1;
-flex-grow: 0;
-margin-top: 0; 
-margin-bottom:0;
-`;
-const AStyled = styled.a`
-margin-left:4px;
-height: 14px;
-font-family: 'Avenir';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 120%;
-display: flex;
-align-items: center;
-color: #000000;
-flex: none;
-order: 1;
-flex-grow: 0;
-text-decoration-line: underline;
-
-`;
-
-const LabelFile = styled.label`
-   box-sizing: border-box;
-
-/* Auto layout */
-
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 9px 10px;
 gap: 10px;
-
-width: 326px;
-height: 38px;
-
-background: #FFFFFF;
-border: 1px dashed #D0D6D9;
-border-radius: 8px;
-
-/* Inside auto layout */
-
-flex: none;
-order: 1;
-flex-grow: 0;
-
-`;
-const InputFile = styled.input`
-    display: none;
+color:#9333EA;
+border-radius: 10px;
+ border-width: 1px;
+  border: solid 1px #9333EA;
+ 
+ 
+  background-image: linear-gradient(#fff, #fff), radial-gradient(circle at top left,#F0E1CE, #F0E1CE);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+@media only screen and (max-width: 480px) {
+ 
+}
 `;
 
+const HiddeableWidget = styled.div`
+  display: none;
+  @media (max-width: 480px) {
+    display: block;
+  }
+`;
 // State
 State.init({
-  profilepath: "",
+  theme,
+  img: { uploading: false, cid: null, name: "" },
   name: "",
   profileAccount: "",
+  house_intended: "",
   issued1: "",
   issued2: "",
   issued3: "",
-  house_intended: "",
+  addition_platform: "",
+
   afiliation: [
     {
       company_name: "",
       start_date: "",
       end_date: "",
+      role: "",
     },
   ],
   agreement: false,
@@ -583,100 +210,8 @@ State.init({
   error_msg: "",
 });
 
-const handleInputs = (_type, _param) => {
-  switch (_type) {
-    case "name":
-      State.update({ name: _param.target.value });
-      break;
-    case "profileAccount":
-      State.update({ profileAccount: _param.target.value });
-      break;
-
-    case "issued1":
-      State.update({ issued1: _param.target.value });
-      break;
-    case "issued2":
-      State.update({ issued2: _param.target.value });
-      break;
-    case "issued3":
-      State.update({ issued3: _param.target.value });
-      break;
-
-    case "house_intended":
-      State.update({ house_intended: _param.target.value });
-      break;
-
-    case "agreement":
-      State.update({ agreement: _param.target.value });
-      break;
-      agreement;
-    case "tags":
-      State.update({ tags: _param.target.value });
-      break;
-    default:
-  }
-};
-const handleProfilepic = (event) => {
-  if (event.target.files && event.target.files[0]) {
-    let img = event.target.files[0];
-    State.update({ profilepath: URL.createObjectURL(img) });
-  }
-};
-const handleFileChange = (event) => {
-  console.log(event);
-  State.update({ profilepath: URL.createObjectURL(event.target.value) });
-};
-const addFields = () => {
-  var temp = state.afiliation;
-  let object = {
-    company_name: "",
-    start_date: "",
-    end_date: "",
-  };
-
-  if (temp.length === 6) {
-    return;
-  } else {
-    temp.push(object);
-    State.update({ afiliation: temp });
-  }
-};
-let AffiliationBodyheight = "125px";
-const handleFieldsChange = (event, index, _input) => {
-  let data = state.afiliation;
-  AffiliationBodyheight = "340px";
-  switch (_input) {
-    case "company":
-      console.log("updating the company");
-      data[index].company_name = event.target.value;
-      break;
-    case "start":
-      console.log("updating the company");
-      data[index].start_date = event.target.value;
-      break;
-    case "end":
-      console.log("updating the company");
-      data[index].end_date = event.target.value;
-      break;
-    default:
-      break;
-  }
-  console.log(data[index]);
-  console.log(data);
-  State.update({ afiliation: data });
-};
-const removeField = (index) => {
-  let data = state.afiliation;
-  console.log(data);
-  data.splice(index, 1);
-  console.log(data);
-  State.update({ afiliation: data });
-};
-
-const submitButton = () => {};
 const validatedInputs = () => {
   const {
-    profilepath,
     name,
     profileAccount,
     issued1,
@@ -712,28 +247,116 @@ const validatedInputs = () => {
   }
 };
 
+const uploadFileUpdateState = (body) => {
+  console.log("sending img");
+  asyncFetch("https://ipfs.near.social/add", {
+    method: "POST",
+    headers: { Accept: "application/json" },
+    body,
+  }).then(async (res) => {
+    console.log("body", res.body);
+    const _cid = res.body.cid;
+    const _name = body.name;
+    State.update({ img: { uploading: true, cid: _cid, name: _name } });
+    console.log("final ", state);
+  });
+
+  console.log("final ", state.img);
+};
+
+const filesOnChange = (files) => {
+  if (files) {
+    uploadFileUpdateState(files[0]);
+  }
+};
+
+const handleName = (item) => {
+  State.update({ name: item });
+};
+const handleProfile = (item) => {
+  State.update({ profileAccount: item });
+};
+const handleHouse = (item) => {
+  State.update({ house_intended: item });
+};
+const handleIssued1 = (item) => {
+  State.update({ issued1: item });
+};
+const handleIssued2 = (item) => {
+  State.update({ issued2: item });
+};
+const handleIssued3 = (item) => {
+  State.update({ issued3: item });
+};
+const handleAditional = (item) => {
+  State.update({ addition_platform: item });
+};
+const addFields = () => {
+  var temp = state.afiliation;
+  let object = {
+    company_name: "",
+    start_date: "",
+    end_date: "",
+    role: "",
+  };
+
+  if (temp.length === 6) {
+    return;
+  } else {
+    temp.push(object);
+    State.update({ afiliation: temp });
+  }
+};
+const removeField = (index) => {
+  let data = state.afiliation;
+  console.log(data);
+  data.splice(index, 1);
+  console.log(data);
+  State.update({ afiliation: data });
+};
+const handleAFFCompanyName = (params) => {
+  let data = state.afiliation;
+  console.log("updating the company", params);
+  data[params.index].company_name = params.event.target.value;
+  State.update({ afiliation: data });
+};
+const handleAFFStartdate = (params) => {
+  let data = state.afiliation;
+
+  data[params.index].start_date = params.event.target.value;
+  State.update({ afiliation: data });
+};
+const handleAFFEnddate = (params) => {
+  let data = state.afiliation;
+
+  data[params.index].end_date = params.event.target.value;
+  State.update({ afiliation: data });
+};
+const handleAFFRole = (params) => {
+  let data = state.afiliation;
+  data[params.index].role = params.event.target.value;
+  State.update({ afiliation: data });
+};
+const handleTags = (item) => {
+  State.update({ tags: item.target.value });
+};
+const handleDeclaration = (item) => {
+  State.update({ agreement: item.target.checked });
+};
 return (
-  <>
+  <ModalCard>
     <div
       style={{
-        background: "#FFFFFF",
-        position: "relative",
-        width: "390px",
-        height: "full",
+        display: "flex",
+        "justify-content": "center",
+        "padding-top": "16px",
+        "margin-bottom": "15px",
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          "justify-content": "center",
-          "padding-top": "16px",
-          "margin-bottom": "15px",
-        }}
-      >
+      <HiddeableWidget>
         <Widget
           src={`syi216.near/widget/NDC.nomination.card`}
           props={{
-            profilepath: state.profilepath,
             name: state.name,
             profileAccount: state.profileAccount,
             issued1: state.issued1,
@@ -744,281 +367,80 @@ return (
             tags: state.tags.split(";"),
           }}
         />
-      </div>
-      <CardStyled name="compose">
-        <div className="d-flex flex-column ">
-          <div className="d-flex flex-column">
-            <H1styled>Self Nominate</H1styled>
-          </div>
-          <CardForm>
-            <Formsection style={{ order: "0" }}>
-              <H2styled>Profile picture {state.profilepath} </H2styled>
-
-              <LabelFile class="custom-file-upload">
-                <InputFile type="file" />
-                <img
-                  src={`https://emerald-related-swordtail-341.mypinata.cloud/ipfs/QmWyPdBc3nqDe2mAp26a4BAvDYiuk1JEfJiyGejff3ZrjL?_gl=1*mwwy4f*rs_ga*YTcxZDg1OTgtZTYyOC00M2U2LWE4MTctNzUzMDRkMjA3ZWVl*rs_ga_5RMPXG14TE*MTY4Njk2NDYyNi4xNC4xLjE2ODY5NjQ2NDQuNDIuMC4w`}
-                />
-                <p
-                  style={{
-                    width: "173px",
-                    height: "14px",
-                    "font-family": "Avenir",
-                    "font-style": "normal",
-                    "font-weight": "400",
-                    "font-size": "12px",
-                    "line-height": "120%",
-                    display: "flex",
-                    "align-items": "center",
-                    color: "#828688",
-                    flex: "none",
-                    order: "1",
-                    "flex-grow": "0",
-                  }}
-                >
-                  {"Click here to upload your image "}
-                </p>
-              </LabelFile>
-            </Formsection>
-            <Formsection style={{ order: "1" }}>
-              <H2styled>Name </H2styled>
-              <InputStyled
-                name="Name"
-                id="Name"
-                type="text"
-                placeholder="Nomination name"
-                onChange={(e) => handleInputs("name", e)}
-              />
-            </Formsection>
-            <Formsection style={{ order: "2" }}>
-              <H2styled>Profile </H2styled>
-              <InputStyled
-                name="Profile"
-                id="Profile"
-                type="text"
-                placeholder="@profile"
-                onChange={(e) => handleInputs("profileAccount", e)}
-              />
-            </Formsection>
-            <FormsectionPlatform style={{ order: "3" }}>
-              <FormsectionPlatformtitle>
-                {"Platform - Key Issue 1: What’s your view and pledge on XYZ?"}{" "}
-              </FormsectionPlatformtitle>
-              <FormsectionPlatformtextarea
-                name="Profile"
-                id="Profile"
-                type="text"
-                placeholder="Write your platform "
-                onChange={(e) => handleInputs("issued1", e)}
-              />
-            </FormsectionPlatform>
-            <FormsectionPlatform>
-              <FormsectionPlatformtitle>
-                {"Platform - Key Issue 2: What’s your view and pledge on XYZ?"}{" "}
-              </FormsectionPlatformtitle>
-              <FormsectionPlatformtextarea
-                name="Profile"
-                id="Profile"
-                type="text"
-                placeholder="Write your platform "
-                onChange={(e) => handleInputs("issued2", e)}
-              />
-            </FormsectionPlatform>
-            <FormsectionPlatform>
-              <FormsectionPlatformtitle>
-                {"Platform - Key Issue 3: What’s your view and pledge on XYZ?"}{" "}
-              </FormsectionPlatformtitle>
-              <FormsectionPlatformtextarea
-                name="Profile"
-                id="Profile"
-                type="text"
-                placeholder="Write your platform "
-                onChange={(e) => handleInputs("issued3", e)}
-              />
-            </FormsectionPlatform>
-            <FormsectionHouse style={{ order: "4" }}>
-              <H2styled>{"House"} </H2styled>
-              <FormsectionHouseDropdown
-                name="house-intended"
-                id="house-intended"
-                onChange={(e) => handleInputs("house_intended", e)}
-              >
-                <option default value="0">
-                  Select house
-                </option>
-                <option value="Council of Advisors">Council of Advisors</option>
-                <option value="House Of Merit">House Of Merit</option>
-                <option value="Transparency Commission">
-                  Transparency Commission
-                </option>
-              </FormsectionHouseDropdown>
-            </FormsectionHouse>
-            <FormsectionAffiliation>
-              <AffiliationHead>
-                <AffiliationTitle>
-                  <H2styled>{"Afiliations"}</H2styled>
-                  <button
-                    onClick={addFields}
-                    style={{
-                      background: "#00000000",
-                      "border-color": "#00000000",
-                    }}
-                  >
-                    <img
-                      src={`https://emerald-related-swordtail-341.mypinata.cloud/ipfs/QmbNqXEbUqSkGY7quBnyBqU6nKuXimYTnxTNsbYHnhdVXw?_gl=1*aubyn4*rs_ga*YTcxZDg1OTgtZTYyOC00M2U2LWE4MTctNzUzMDRkMjA3ZWVl*rs_ga_5RMPXG14TE*MTY4Njk0MjQwOC4xMS4xLjE2ODY5NDI0NzMuNTcuMC4w`}
-                    />
-                  </button>
-                </AffiliationTitle>
-                <hr
-                  style={{
-                    width: "326px",
-                    height: "0px",
-                    border: "1px solid rgba(208, 214, 217, 0.4)",
-                    flex: "none",
-                    order: "1",
-                    margin: "0px",
-                    "flex-grow": "0",
-                  }}
-                />
-              </AffiliationHead>
-
-              <AffiliationBody
-                style={{
-                  height: AffiliationBodyheight,
-                  "overflow-y": "auto",
-                }}
-              >
-                {state.afiliation.map((form, index) => {
-                  return (
-                    <>
-                      <Companycont
-                        style={{ order: index, "margin-top": "2px" }}
-                      >
-                        <CompanyTitle>
-                          {"Company Name"}
-
-                          <button
-                            onClick={removeField}
-                            style={{
-                              background: "#00000000",
-                              "border-color": "#00000000",
-                            }}
-                          >
-                            <img
-                              style={{
-                                width: "20px",
-                                height: "20px",
-                              }}
-                              src={`https://emerald-related-swordtail-341.mypinata.cloud/ipfs/Qmb1wcWEWHiqYq5UvtuChVB2u4MEyKutL9UU5LcTrULriP?_gl=1*iz6jdo*rs_ga*YTcxZDg1OTgtZTYyOC00M2U2LWE4MTctNzUzMDRkMjA3ZWVl*rs_ga_5RMPXG14TE*MTY4Njk1MTE5NS4xMi4xLjE2ODY5NTEyMjkuMjYuMC4w`}
-                            />
-                          </button>
-                        </CompanyTitle>
-                        <CompanyInput
-                          placeholder="Company Name"
-                          onChange={(event) =>
-                            handleFieldsChange(event, index, "company")
-                          }
-                        ></CompanyInput>
-                      </Companycont>
-                      <DateCont style={{ order: index + 1 }}>
-                        <DateContItem>
-                          <CompanyTitle>{"Start date"}</CompanyTitle>
-                          <CompanyInput
-                            style={{ width: "161px" }}
-                            placeholder="Company Name"
-                            onChange={(event) =>
-                              handleFieldsChange(event, index, "start")
-                            }
-                          ></CompanyInput>
-                        </DateContItem>
-                        <DateContItem>
-                          <CompanyTitle>{"End date"}</CompanyTitle>
-                          <CompanyInput
-                            style={{ width: "161px" }}
-                            placeholder="Company Name"
-                            onChange={(event) =>
-                              handleFieldsChange(event, index, "end")
-                            }
-                          ></CompanyInput>
-                        </DateContItem>
-                      </DateCont>
-                    </>
-                  );
-                })}
-              </AffiliationBody>
-              <FormsectionPlatform style={{ order: "3" }}>
-                <FormsectionPlatformtitle>
-                  {"Description of your Role"}{" "}
-                </FormsectionPlatformtitle>
-                <FormsectionPlatformtextarea
-                  style={{
-                    "font-family": "Avenir",
-                    "font-style": "normal",
-                    "font-weight": "400",
-                    "font-size": "10px",
-                  }}
-                  name="Description"
-                  id="Description"
-                  type="text"
-                  placeholder="Add tags that describe your nomination, separated by comma"
-                  onChange={(e) => handleInputs("issued1", e)}
-                />
-              </FormsectionPlatform>
-              <Formsection style={{ order: "6" }}>
-                <H2styled>{"Tags"} </H2styled>
-                <InputStyled
-                  style={{
-                    "font-family": "Avenir",
-                    "font-style": "normal",
-                    "font-weight": "400",
-                    "font-size": "10px",
-                  }}
-                  name="Tags"
-                  id="Tags"
-                  type="text"
-                  placeholder="Add tags that describe your nomination"
-                  onChange={(e) => handleInputs("tags", e)}
-                />
-              </Formsection>
-            </FormsectionAffiliation>
-          </CardForm>
-          <Formsection
-            style={{ order: "7", height: "auto", "margin-left": "16px" }}
-          >
-            <H2Declarationstyled>
-              {"Declaration of transparency "}
-            </H2Declarationstyled>
-          </Formsection>
-        </div>
-      </CardStyled>
-
-      <Formsection
-        style={{
-          order: "7",
-
-          "align-items": " flex-start",
-          "margin-left": "16px",
-          "margin-right": "auto",
-        }}
-      >
-        <FormsectionDecaration
-          style={{
-            "margin-top": "10px",
-          }}
-        >
-          <InputcheckboxStyled
-            type="checkbox"
-            onChange={(e) => handleInputs("agreement", e)}
-          />
-          <PStyled>
-            I agree the <AStyled>{"Declaration of transparency"} </AStyled>
-          </PStyled>
-        </FormsectionDecaration>
-      </Formsection>
-      <Submitcontainer>
-        <SubmitBtn onClick={validatedInputs}> Submit </SubmitBtn>
-        <CancelBtn> Cancel </CancelBtn>
-      </Submitcontainer>
+      </HiddeableWidget>
     </div>
-  </>
+    <CardStyled name="compose" class="Cardstyled">
+      <div className="d-flex flex-column ">
+        <div className="d-flex flex-column">
+          <H1styled>Self Nominate</H1styled>
+        </div>
+        <CardForm name="cardform">
+          <Widget
+            src={`dokxo.near/widget/Compose.Profile`}
+            props={{
+              img: state.img,
+              name: state.name,
+              profileAccount: state.profileAccount,
+              house_intended: state.house_intended,
+
+              filesOnChange: (file) => filesOnChange(file),
+              handleName: (text) => handleName(text),
+              handleProfile: (text) => handleProfile(text),
+              handleHouse: (text) => handleHouse(text),
+            }}
+          />
+          <Widget
+            src={`dokxo.near/widget/Compose.Platform`}
+            props={{
+              issued1: state.issued1,
+              issued2: state.issued2,
+              issued3: state.issued3,
+              addition_platform: state.addition_platform,
+
+              handleIssued1: (file) => handleIssued1(file),
+              handleIssued2: (text) => handleIssued2(text),
+              handleIssued3: (text) => handleIssued3(text),
+              handleAditional: (text) => handleAditional(text),
+            }}
+          />
+          <Widget
+            src={`dokxo.near/widget/Compose.Affiliations`}
+            props={{
+              affiliations: state.afiliation,
+
+              addFields: () => addFields(),
+              removeField: (index) => removeField(index),
+              handleAFFCompanyName: (_params) => handleAFFCompanyName(_params),
+              handleAFFStartdate: (_params) => handleAFFStartdate(_params),
+              handleAFFEnddate: (_params) => handleAFFEnddate(_params),
+              handleAFFRole: (_params) => handleAFFRole(_params),
+            }}
+          />
+
+          <Widget
+            src={`dokxo.near/widget/Compose.TagAndDeclaration`}
+            props={{
+              agreement: state.agreement,
+              tags: state.tags,
+              handleTags: (item) => handleTags(item),
+              handleDeclaration: (item) => handleDeclaration(item),
+            }}
+          />
+          <div
+            class="row col-sm-12  mx-0  "
+            style={{
+              width: "100%",
+              "padding-left": "16px",
+              "padding-right": "16px",
+            }}
+          >
+            <Submitcontainer>
+              <CancelBtn> Cancel </CancelBtn>
+              <SubmitBtn onClick={validatedInputs}> Submit </SubmitBtn>
+            </Submitcontainer>
+          </div>
+        </CardForm>
+      </div>
+    </CardStyled>
+  </ModalCard>
 );
