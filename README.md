@@ -14,8 +14,8 @@
 
 ---
 
-## NDC.Nomination.Detail - **Status** ***(Work in progress)***
-### [Component code](https://near.org/near/widget/ComponentDetailsPage?src=syi216.near/widget/NDC.Nomination.Detail)
+## NDC.Nomination.Candidate - **Status** ***(Work in progress)***
+### [Component code](https://near.org/yairnava.near/widget/NDC.Nomination.Candidate.Container)
 
 ---
 
