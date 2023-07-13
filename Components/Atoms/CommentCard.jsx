@@ -1,10 +1,14 @@
 const ModalCard = styled.div`
-width: 100%;
-height: 100%;
-z-index: 1;
-background: rgba(0, 0, 0, 0.70);
-padding-top: 25%;
-padding-bottom: 25%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    background: rgba(0, 0, 0, 0.70);
  
 @media only screen and (max-width: 480px) {
  
@@ -21,19 +25,19 @@ border-radius: 10px;
 background: #FFF;
 border: 1px solid transparent;
  margin-left: auto;
-    margin-right: auto;
-    
-    margin-buttom: 50%;
+ margin-right: auto;
+ margin-buttom: 50%;
   
    
 @media only screen and (max-width: 480px) {
+ width: 90%;
  
 }
 `;
 const CTitle = styled.div`
 color: var(--000000, #000);
 font-size: 14px;
-font-family: Avenir;
+font-family: Open Sans;
 font-style: normal;
 font-weight: 500;
 line-height: 120%;
@@ -83,16 +87,16 @@ align-self: stretch;
 `;
 const BCMHeader = styled.div`
 display: flex;
-width: 326px;
+width: 100%;
 align-items: center;
 gap: 8px;
 @media only screen and (max-width: 480px) {
- 
+  
 }
 `;
 const BCMProfile = styled.div`
-width: 20px;
-height: 20px;
+width: 28px;
+height: 28px;
 flex-shrink: 0;
 flex-direction:row;
 border-radius: 29px;
@@ -103,8 +107,8 @@ text-align: center;
 }
 `;
 const BCMProfileimg = styled.img`
-width: 12.5px;
-height: 12.5px;
+width: 28px;
+height: 28px;
 flex-shrink: 0;
 vertical-align: initial;
 @media only screen and (max-width: 480px) {
@@ -113,13 +117,13 @@ vertical-align: initial;
 `;
 const BCMProfileUsername = styled.label`
 display: flex;
-width: 228px;
+width: 100%;
 flex-direction: column;
 justify-content: center;
 flex-shrink: 0;
 color: #000;
-font-size: 12px;
-font-family: Avenir;
+font-size: 14px;
+font-family: Open Sans;
 font-style: normal;
 font-weight: 500;
 line-height: 120%;
@@ -131,9 +135,9 @@ const BCMMessage = styled.div`
 display: flex;
 flex-direction: column;
 align-self: stretch;
-color: #828688;
+color: #686B6D;
 font-size: 14px;
-font-family: Avenir;
+font-family:  Open Sans;
 font-style: normal;
 font-weight: 400;
 line-height: 120%;
@@ -167,8 +171,8 @@ flex-direction: column;
 justify-content: center;
 flex: 1 0 0;
 color: #000;
-font-size: 10px;
-font-family: Avenir;
+font-size: 14px;
+font-family: Open Sans;
 font-style: normal;
 font-weight: 300;
 line-height: normal;
@@ -195,7 +199,7 @@ border: solid 1px #9333EA;
 `;
 const BFCBIText = styled.label`
 font-size: 12px;
-font-family: Avenir;
+font-family: Open Sans;
 font-style: normal;
 font-weight: 500;
 line-height: 24px;
@@ -204,6 +208,7 @@ cursor: pointer;
   
 `;
 const NewComment = styled.textarea`
+width: 100%;
 display: flex;
 height: 100px;
 padding: 9px 10px 0px 10px;
@@ -214,9 +219,9 @@ align-self: stretch;
   border-radius: 8px;
     border: 1px solid #D0D6D9;
     background: #FFF;
-    color: #828688;
+   
 font-size: 12px;
-font-family: Avenir;
+font-family: Open Sans;
 font-style: normal;
 font-weight: 400;
 line-height: 120%;
@@ -249,7 +254,7 @@ border-radius: 10px;
   background-origin: border-box;
   background-clip: padding-box, border-box;
 @media only screen and (max-width: 480px) {
- 
+ width: 100%;
 }
 `;
 
@@ -276,122 +281,220 @@ border-radius: 10px;
   background-origin: border-box;
   background-clip: padding-box, border-box;
 @media only screen and (max-width: 480px) {
- 
+ width: 100%;
 }
 `;
-const { username, profile_picture, originalComment, timeago, _share_url } =
-  props;
+
+const CommentCandidate = () => {
+  //Validate the Data outPut
+  if (state.reply === null) {
+    State.update({ e_message: "Write a comment " });
+    return;
+  }
+  if (state.reply != "") {
+    // call the smart contract Self nominate comment
+
+    Near.call(
+      nominationcontract
+        ? nominationcontract
+        : "nominations-v1.gwg-testing.near",
+      "comment",
+      {
+        candidate: username,
+        comment: state.reply,
+      },
+      300000000000000
+    ).then(() => {
+      props.onClickCancel();
+    });
+  } else {
+    //The fields are incomplete
+  }
+};
+const CommenttoReplay = () => {
+  //Validate the Data outPut
+  if (state.reply != null) {
+    // call the smart contract Self nominate comment
+    /*   Near.call(
+      nominationcontract
+        ? nominationcontract
+        : "nominations-v1.gwg-testing.near",
+      "comment",
+      {
+        candidate: username,
+        comment: state.reply,
+      }
+    ).then(() => {
+      props.onClickCancel();
+    });*/
+  } else {
+    //The fields are incomplete
+  }
+};
+// candidateOrReplay :true-Comment candidate  :false-Comment to reply
+const {
+  nominationcontract,
+  candidateOrReplay,
+  username,
+  profile_picture,
+  originalComment,
+  originalCommentID,
+  timeago,
+  _share_url,
+} = props;
 // State
 State.init({
   theme,
   reply: "",
   share_url: _share_url,
   cancel: false,
+  e_message: "",
+  shareText: "Copy to the clipboard ",
 });
 
-const Submit = () => {
-  console.log(state);
+const SetText = (txt) => {
+  console.log("cop");
+  State.update({ shareText: txt });
 };
-
 return (
   <ModalCard>
-    {" "}
     <CommentCard>
-      <CTitle>Comment to reply</CTitle>
+      <CTitle>
+        {candidateOrReplay ? " Add a Comment" : "Replay to comment"}
+      </CTitle>
       <Ccontainer>
-        <CommentBody>
-          <BComment>
-            <BCommentmessage>
-              <BCMHeader>
-                <BCMProfile>
-                  <BCMProfileimg
-                    alt="pic"
-                    src={
-                      profile_picture
-                        ? profile_picture
-                        : "https://emerald-related-swordtail-341.mypinata.cloud/ipfs/QmTKv1yHQKRDQcmc5Jkv2jkaTx2Q1jJE9srHEmyYPq53vJ?preview=1"
-                    }
-                  />
-                </BCMProfile>
-                <BCMProfileUsername>
-                  {username ? username : "@user.near"}
-                </BCMProfileUsername>
-              </BCMHeader>
-              <BCMMessage>
-                {" "}
-                {originalComment
-                  ? originalComment
-                  : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integerquam enim, dignissim sed ante at, convallis maximus enim. Duis  condimentum aliquam nisl nec sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quam enim, dignissim  sed ante at, convallis maximus enim. Duis condimentum aliquam nisl nec sagittis."}
-              </BCMMessage>
-            </BCommentmessage>
-          </BComment>
-          <BFooter>
-            <BFootercont>
-              <BFootercontTime>
-                <img
-                  alt="schedule"
-                  src={
-                    "https://emerald-related-swordtail-341.mypinata.cloud/ipfs/QmP3uRUgZtqV3HAgcZoYaDA6JSPpFcpqULvgenWUs3ctSP"
-                  }
-                />
-                <BFCTimetext> {timeago ? timeago : "2 hours ago"}</BFCTimetext>
-              </BFootercontTime>
-              <BFCButton>
-                <OverlayTrigger
-                  key={placement}
-                  placement={placement}
-                  overlay={
-                    <Tooltip id={`tooltip-${placement}`}>
-                      Copy to clipboard <strong>{placement}</strong>.
-                    </Tooltip>
-                  }
-                >
-                  <BFCButtonitem
-                    onClick={() => {
-                      clipboard.writeText(state.share_url);
-                    }}
-                  >
-                    <BFCBIText>Share</BFCBIText>
+        {!candidateOrReplay ? (
+          <>
+            <CommentBody>
+              <BComment>
+                <BCommentmessage>
+                  <BCMHeader>
+                    <BCMProfile>
+                      {profile_picture ? (
+                        <BCMProfileimg
+                          style={{ "border-radius": "20px" }}
+                          alt="pic"
+                          src={
+                            "https://nativonft.mypinata.cloud/ipfs/" +
+                            profile_picture
+                          }
+                        />
+                      ) : (
+                        <BCMProfileimg
+                          alt="pic"
+                          src={
+                            "https://emerald-related-swordtail-341.mypinata.cloud/ipfs/QmTKv1yHQKRDQcmc5Jkv2jkaTx2Q1jJE9srHEmyYPq53vJ?preview=1"
+                          }
+                        />
+                      )}
+                    </BCMProfile>
+                    <BCMProfileUsername>
+                      {username ? "@" + username : "@user.near"}
+                    </BCMProfileUsername>
+                  </BCMHeader>
+                  <BCMMessage>
+                    {" "}
+                    {originalComment
+                      ? originalComment
+                      : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integerquam enim, dignissim sed ante at, convallis maximus enim. Duis  condimentum aliquam nisl nec sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quam enim, dignissim  sed ante at, convallis maximus enim. Duis condimentum aliquam nisl nec sagittis."}
+                  </BCMMessage>
+                </BCommentmessage>
+              </BComment>
+              <BFooter>
+                <label>{state.e_message}</label>
+                <BFootercont>
+                  <BFootercontTime>
                     <img
-                      alt="share"
+                      alt="schedule"
                       src={
-                        "https://emerald-related-swordtail-341.mypinata.cloud/ipfs/QmdFMobsnCyj9USY2mHtLzhu58Mz6BFpMx7tKPQGoWmsHY?preview=1"
+                        "https://emerald-related-swordtail-341.mypinata.cloud/ipfs/QmP3uRUgZtqV3HAgcZoYaDA6JSPpFcpqULvgenWUs3ctSP"
                       }
+                      style={{ width: "14px", height: "14px" }}
                     />
-                  </BFCButtonitem>
-                </OverlayTrigger>
-              </BFCButton>
-            </BFootercont>
-          </BFooter>
-        </CommentBody>
-        <hr
-          style={{
-            width: "100%",
-            height: "0px",
-            border: "1px solid rgba(130, 134, 136, 0.20)",
-            flex: "none",
-            background: "rgba(130, 134, 136, 0.20)",
-            margin: "0px",
-            "flex-grow": "0",
-          }}
-        />
-        <NewComment
-          placeholder="Replay here"
-          onChange={(e) => {
-            State.update({ reply: e.target.value });
-          }}
-        />
-        <CommentFooter>
-          <CFCancel
-            onClick={() => {
-              State.update({ cancel: true });
+                    <BFCTimetext>
+                      {" "}
+                      {timeago ? timeago : "2 hours ago"}
+                    </BFCTimetext>
+                  </BFootercontTime>
+                  <BFCButton>
+                    <OverlayTrigger
+                      key={placement}
+                      placement={placement}
+                      overlay={
+                        <Tooltip id={`tooltip-${placement}`}>
+                          {state.shareText}
+                        </Tooltip>
+                      }
+                    >
+                      <BFCButtonitem
+                        onClick={() => {
+                          SetText("Copied to the clipboard");
+                          clipboard.writeText(state.share_url);
+                        }}
+                      >
+                        <BFCBIText>Share</BFCBIText>
+                        <img
+                          alt="share"
+                          src={
+                            "https://emerald-related-swordtail-341.mypinata.cloud/ipfs/QmdFMobsnCyj9USY2mHtLzhu58Mz6BFpMx7tKPQGoWmsHY?preview=1"
+                          }
+                        />
+                      </BFCButtonitem>
+                    </OverlayTrigger>
+                  </BFCButton>
+                </BFootercont>
+              </BFooter>
+            </CommentBody>
+            <hr
+              style={{
+                width: "100%",
+                height: "0px",
+                border: "1px solid rgba(130, 134, 136, 0.20)",
+                flex: "none",
+                background: "rgba(130, 134, 136, 0.20)",
+                margin: "0px",
+                "flex-grow": "0",
+              }}
+            />
+          </>
+        ) : (
+          <></>
+        )}
+        <div class="w-100 col">
+          <NewComment
+            value={state.reply}
+            placeholder="Reply here"
+            onChange={(e) => {
+              State.update({
+                reply: e.target.value.substring(0, 1000),
+              });
+            }}
+          />
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              "justify-content": "end",
             }}
           >
-            Cancel
-          </CFCancel>
+            <label
+              style={{
+                "font-size": "8px",
+                display: "flex",
+                "vertical-align": "top",
+                "text-align": "center",
+                color: state.reply.length < 1000 ? "#00000075" : "#ff000075",
+              }}
+            >
+              {state.reply.length} - 1000
+            </label>
+          </div>
+        </div>
+        <CommentFooter>
+          <CFCancel onClick={props.onClickCancel}>Cancel</CFCancel>
           <CFSubmit
             onClick={() => {
-              Submit();
+              candidateOrReplay ? CommentCandidate() : CommenttoReplay();
             }}
           >
             Submit
