@@ -158,6 +158,14 @@ border-radius: 10px;
 }
 
 `;
+const Separator= styled.div`
+width:100%;
+height:2px;
+background-color: #D0D6D966;
+border: solid 0px transparent;
+ 
+
+`;
 const CancelBtn = styled.button`
   display: flex;
 width: 107px;
@@ -188,6 +196,7 @@ const HiddeableWidget = styled.div`
 // State
 State.init({
   theme,
+  commitLoading,
   img: { uploading: false, cid: null, name: "" },
   name: "",
   profileAccount: "",
@@ -212,12 +221,11 @@ State.init({
 
 const validatedInputs = () => {
   const {
+    img,
     name,
     profileAccount,
-    issued1,
-    issued2,
-    issued3,
     house_intended,
+        
     afiliation,
     agreement,
     tags,
@@ -225,26 +233,73 @@ const validatedInputs = () => {
   console.log(state);
   const isEmpty = (str) => str.trim() === "";
   const isFalse = (check) => check === false;
+  let isValid=false;
+  if (img.cid===null) {
+    State.update({ error_msg: "Pic a image" });
+    return false;
+  }
   if (isEmpty(name)) {
     State.update({ error_msg: "Fill the name" });
-    console.log("Fill the name");
+    
     return false;
   }
   if (isEmpty(profileAccount)) {
     State.update({ error_msg: "Fill the Profile Account" });
-    console.log("Fill the Profile Account");
+    
     return false;
   }
   if (isEmpty(house_intended)) {
     State.update({ error_msg: "Select a house" });
-    console.log("Select a house");
+    
+    return false;
+  }
+  if ((tags.split(",").length==0)) {
+    State.update({ error_msg: "Write a tag" });
+ 
     return false;
   }
   if (isFalse(agreement)) {
     State.update({ error_msg: "Accept the declaration" });
+ 
+    return false;
+  }
+  if (afiliation.length==0) {
+    State.update({ error_msg: "Add a affiliation" });
     console.log("Accept the declaration");
     return false;
   }
+
+  if (afiliation.length>0) {
+    afiliation.forEach(element => {
+
+      if (isEmpty(element.company_name)) {
+        State.update({ error_msg: "Fill the company name" });
+        
+        return false;
+      }
+      if (isEmpty(element.start_date)) {
+        State.update({ error_msg: "select a start date" });
+        
+        return false;
+      }
+      if (isEmpty(element.end_date)) {
+        State.update({ error_msg: "select a end date" });
+        
+        return false;
+      }
+      if (isEmpty(element.role)) {
+        State.update({ error_msg: "Write your role" });
+        
+        return false;
+      }
+       
+      
+    });
+   
+  }else{
+    isValid= true;
+  }
+  return isValid;
 };
 
 const uploadFileUpdateState = (body) => {
@@ -343,6 +398,30 @@ const handleTags = (item) => {
 const handleDeclaration = (item) => {
   State.update({ agreement: item.target.checked });
 };
+
+const Self_Nominate=()=> {
+      //Validate the Data outPut
+     if( validatedInputs()){
+   //Post to Social DB
+  /*  State.update({ commitLoading: true });
+   Social.set(data, {
+     force: true,
+     onCommit: () => {
+       State.update({ commitLoading: false });
+     },
+     onCancel: () => {
+       State.update({ commitLoading: false });
+     },
+   });
+ */
+   //Call self_Nominate SM Contract
+     }
+     else{
+      //The fields are incomplete
+     }
+   
+
+  }
 return (
   <ModalCard>
     <div
@@ -364,7 +443,7 @@ return (
             issued3: state.issued3,
             house_intended: state.house_intended,
             afiliation: state.afiliation,
-            tags: state.tags.split(";"),
+            tags: state.tags.split(","),
           }}
         />
       </HiddeableWidget>
@@ -434,9 +513,13 @@ return (
               "padding-right": "16px",
             }}
           >
+            <div style={{padding:"12px"}}>
+              <Separator/>
+            </div>
+            
             <Submitcontainer>
               <CancelBtn> Cancel </CancelBtn>
-              <SubmitBtn onClick={validatedInputs}> Submit </SubmitBtn>
+              <SubmitBtn onClick={Self_Nominate}> Submit </SubmitBtn>
             </Submitcontainer>
           </div>
         </CardForm>

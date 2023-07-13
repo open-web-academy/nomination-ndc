@@ -24,5 +24,28 @@
 
 ---
 
+### NDC.Nomination.Compose - **Status** ***(Work in progress)***
+#### [Component code](https://near.org/dokxo.near/widget/Compose.Profile)
+
+---
+
+### NDC.Nomination.Compose - **Status** ***(Work in progress)***
+#### [Component code](https://near.org/dokxo.near/widget/Compose.Platform)
+
+---
+### NDC.Nomination.Compose - **Status** ***(Work in progress)***
+#### [Component code](https://near.org/dokxo.near/widget/Compose.Affiliations)
+
+---
+### NDC.Nomination.Compose - **Status** ***(Work in progress)***
+#### [Component code](https://near.org/dokxo.near/widget/Compose.TagsAndDeclaration)
+
+---
+
 ## NDC.Nomination.CommentReplay - **Status** ***(Work in progress)***
 ### [Component code](https://near.org/dokxo.near/widget/CommentCard)
+---
+
+## NDC.Nomination.CommentReplay - **Status** ***(Work in progress)***
+### [Component code](https://near.org/dokxo.near/widget/NDC.Nomination.DeleteNomination)
+---
