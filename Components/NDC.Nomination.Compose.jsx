@@ -643,7 +643,7 @@ return (
             <Submitcontainer>
               <CancelBtn onClick={props.onClickCancel}> Cancel </CancelBtn>
               <SubmitBtn onClick={Self_Nominate}> Submit </SubmitBtn>
-              {}
+               
             </Submitcontainer>
           </div>
         </CardForm>
